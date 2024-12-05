@@ -125,13 +125,13 @@ class House(): # создаем класс дома
 h1 = House('ЖК Горский', 18)
 h2 = House('Домик в деревне', 2)
 
-print(f'{h1.name, h1.number_of_floors}')
+print(f'{h1.name, h1.number_of_floors}') # я про этот принт
 h1.go_to(10)
-print(f'{h2.name, h2.number_of_floors}')
+print(f'{h2.name, h2.number_of_floors}') # я про этот принт
 h2.go_to(10)
 
 # __str__
-print(h1) # получаем srt представление об объекте
+print(h1) # получаем srt представление об объекте # то есть принт выше мы можем не использовать, чтобы получить информацию, мы уже добавили метод, который это делает
 print(h2) # получаем srt представление об объекте
 
 # __len__
