@@ -20,25 +20,6 @@ class Figure:
                 l += 1
             return self.__sides
 
-        # l = 0
-        # if self.sides_count == len(self.__sides):
-        #     for i in self.__sides:
-        #         self.__sides = []
-        #         while l < self.sides_count:
-        #             self.__sides.append(i)
-        #             l += 1
-        #         return self.__sides
-        # else:
-        #     for i in self.__sides:
-        #         self.__sides = []
-        #         while l < self.sides_count:
-        #             u = i
-        #             self.__sides.append(u)
-        #             l += 1
-        #         return self.__sides
-
-
-
     def get_color(self):
         return self.__color
 
