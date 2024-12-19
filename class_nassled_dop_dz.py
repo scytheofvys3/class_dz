@@ -10,6 +10,7 @@ class Figure:
         l = 0
         if len(self.__sides) == self.sides_count:
             for i in self.__sides:
+                self.__sides = []
                 self.__sides.append(i)
                 return self.__sides
         else:
@@ -81,10 +82,12 @@ class Figure:
 
 class Circle(Figure):
     sides_count = 1
-    __radius = 2 * 3,14 / sides_count
     def __init__(self, __color, *__sides):
         super().__init__(__color, __sides)
         super().check()
+        storona = __sides[0]
+        self.__radius = int(storona) * 3.14 / 1
+
 
     def get_square(self):
         sq = 3.14 * self.__radius ** 2
@@ -124,7 +127,7 @@ class Cube(Figure):
 # Код для проверки:
 circle1 = Circle((200, 200, 100), 10) # (Цвет, стороны)
 cube1 = Cube((222, 35, 130), 6)
-#
+
 # # Проверка на изменение цветов:
 circle1.set_color(55, 66, 77) # Изменится
 print(circle1.get_color())
@@ -143,6 +146,7 @@ print(len(circle1))
 
 # Проверка объёма (куба):
 print(cube1.get_volume())
+print(circle1.get_square())
 
 print('------------------------------------')
 
